@@ -1,0 +1,72 @@
+###
+GET http://localhost:3001/api/places
+
+###
+GET http://localhost:3001/api/places/test
+###
+GET http://localhost:3001/api/places/test/pixels
+###
+GET http://localhost:3001/api/places/test/pixels?x=1&y=1
+###
+POST http://localhost:3001/api/places
+Content-Type: application/json
+
+{
+  "name": "test",
+  "width": 300,
+  "height": 200,
+  "colors": ["#0059ff", "#005900"]
+}
+
+###
+POST http://localhost:3001/api/places
+Content-Type: application/json
+
+{
+  "name": "place",
+  "width": 1000,
+  "height": 1000,
+  "colors": [
+    "#820080",
+    "#888888",
+    "#ffffff",
+    "#222222",
+    "#ffa7d1",
+    "#e50000",
+    "#e59500",
+    "#a06a42",
+    "#e5d900",
+    "#94e044",
+    "#02be01",
+    "#00d3dd",
+    "#0083c7",
+    "#0000ea",
+    "#cf6ee4",
+    "#c4c4c4"
+  ]
+}
+
+###
+DELETE http://localhost:3001/api/places/test
+###
+POST http://localhost:3001/api/places/test
+Content-Type: application/json
+
+{
+  "x": 1,
+  "y": 1,
+  "color": 1
+}
+
+###
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+  "username": "ikmen",
+  "name": "tumen",
+  "password": "kami"
+}
+
+### 
+GET http://localhost:3001/api/users
