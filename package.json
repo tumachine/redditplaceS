@@ -6,7 +6,8 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
     "dev": "cross-env NODE_ENV=delelopment nodemon",
-    "start": "cross-env NODE_ENV=production nodemon",
+    "had": "cross-env NODE_ENV=production nodemon",
+    "start": "nodemon",
     "lint": "eslint .",
     "build:ui": "rm -rf build && cd ../redditplace && npm run build --prod && cp -r build ../redditplaceS",
     "deploy": "git push heroku master",
