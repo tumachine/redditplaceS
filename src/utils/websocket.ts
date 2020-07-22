@@ -46,10 +46,19 @@ class Ws {
 
         if (!this.rooms.get(room)?.has(uuid)) {
           this.rooms.get(room)?.set(uuid, ws);
-          console.log('joined room');
+          console.log(`${uuid} joined room`);
         }
       } else if (operation === 'leave') {
         this.leaveRoom(room, uuid);
+        let count = 0;
+
+        this.rooms.forEach((v) => {
+          v.forEach((a) => {
+            count += 1;
+          });
+        });
+        console.log(`${count} users`);
+        console.log(`${uuid} left room`);
       }
     });
   };
